@@ -1,0 +1,80 @@
+﻿@model Partner
+
+<form method="post">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Detalji Partnera</h2>
+            <hr />
+        </div>
+        @*  <div asp-validation-summary="All"></div> *@
+        <div class="mb-2 row p-1">
+            <label asp-for="Id" class="p-0"></label>
+            <input asp-for="Id" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="FirstName" class="p-0"></label>
+            <input asp-for="FirstName" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="LastName" class="p-0"></label>
+            <input asp-for="LastName" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="Address" class="p-0"></label>
+            <input asp-for="Address" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="PartnerNumber" class="p-0"></label>
+            <input asp-for="PartnerNumber" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="CroatianPIN" class="p-0"></label>
+            <input asp-for="CroatianPIN" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="PartnerTypeId" class="p-0"></label>
+            <input asp-for="PartnerTypeId" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="CreatedAtUtc" class="p-0"></label>
+            <input asp-for="CreatedAtUtc" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="CreateByUser" class="p-0"></label>
+            <input asp-for="CreateByUser" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="IsForeign" class="p-0"></label>
+            <input asp-for="IsForeign" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="ExternalCode" class="p-0"></label>
+            <input asp-for="ExternalCode" disabled class="form-control" />
+
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="Gender" class="p-0"></label>
+            <input asp-for="Gender" disabled class="form-control" />
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <a asp-controller="Partner" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                    Vrati se nazad
+                </a>
+            </div>
+        </div>
+
+    </div>
+</form>

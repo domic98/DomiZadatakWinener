@@ -1,0 +1,37 @@
+﻿@model Policy
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Kreiranje Police</h2>
+            <hr />
+        </div>
+        @*  <div asp-validation-summary="All"></div> *@
+        <div class="mb-2 row p-1">
+            <label asp-for="PolicyNumber" class="p-0"></label>
+            <input asp-for="PolicyNumber" class="form-control" />
+            <span asp-validation-for="PolicyNumber" class="text-danger"></span>
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="PolicyAmount" class="p-0"></label>
+            <input asp-for="PolicyAmount" class="form-control" />
+            <span asp-validation-for="PolicyAmount" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary form-control">Kreiraj i Spremi</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Policy" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                    Vrati se nazad na police
+                </a>
+            </div>
+            <div class="col-12 pt-2">
+                <a asp-controller="Partner" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                    Vrati se nazad na početnu stranicu
+                </a>
+            </div>
+        </div>
+
+    </div>
+</form>

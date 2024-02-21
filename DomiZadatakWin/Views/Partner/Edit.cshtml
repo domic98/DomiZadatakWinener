@@ -1,0 +1,86 @@
+﻿@model Partner
+
+<form method="post">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Uređivanje Partnera</h2>
+            <hr />
+        </div>
+        @*  <div asp-validation-summary="All"></div> *@
+        <div class="mb-2 row p-1">
+            <label asp-for="FirstName" class="p-0"></label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="LastName" class="p-0"></label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="Address" class="p-0"></label>
+            <input asp-for="Address" class="form-control" />
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="PartnerNumber" class="p-0"></label>
+            <input asp-for="PartnerNumber" class="form-control" />
+            <span asp-validation-for="PartnerNumber" class="text-danger"></span>
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="CroatianPIN" class="p-0"></label>
+            <input asp-for="CroatianPIN" class="form-control" />
+            <span asp-validation-for="CroatianPIN" class="text-danger"></span>
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="PartnerTypeId" class="p-0"></label>
+            <input asp-for="PartnerTypeId" class="form-control" />
+            <span asp-validation-for="PartnerTypeId" class="text-danger"></span>
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="CreatedAtUtc" class="p-0"></label>
+            <input asp-for="CreatedAtUtc" class="form-control" />
+            <span asp-validation-for="CreatedAtUtc" class="text-danger"></span>
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="CreateByUser" class="p-0"></label>
+            <input asp-for="CreateByUser" class="form-control" />
+            <span asp-validation-for="CreateByUser" class="text-danger"></span>
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="IsForeign" class="p-0"></label>
+            <input asp-for="IsForeign" class="form-control" data-val="false" />
+            <span asp-validation-for="IsForeign" class="text-danger"></span> 
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="ExternalCode" class="p-0"></label>
+            <input asp-for="ExternalCode" class="form-control" />
+            <span asp-validation-for="ExternalCode" class="text-danger"></span>
+        </div>
+        <div class="mb-2 row p-1">
+            <label asp-for="Gender" class="p-0"></label>
+            <input asp-for="Gender" class="form-control" />
+            <span asp-validation-for="Gender" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary form-control">Ažuriraj</button>
+            </div>
+            <div class="col-6">
+                <a asp-controller="Partner" asp-action="Index" class="btn btn-outline-secondary border form-control">
+                    Vrati se nazad
+                </a>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+
+    }
+
+}
